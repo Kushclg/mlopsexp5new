@@ -2,6 +2,11 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+
+
+plt.plot(xpoints, ypoints)
+plt.show()
 #import joblib
 #import neptune
 #from neptune.types import File
@@ -23,6 +28,8 @@ for _ in range(100):
     lr.fit(X_train, y_train)
     test_mse = mean_squared_error(y_test, lr.predict(X_test))
     average_mse = np.mean(test_mse)
+plt.plot(test_mse,average_mse)
+plt.show()
 print(f'MSE Result: { test_mse}')
 print("Average Mean Squared Error:", average_mse)
 # Write metrics to file
