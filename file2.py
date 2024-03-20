@@ -5,8 +5,6 @@ from sklearn.model_selection import train_test_split
 
 
 
-plt.plot(xpoints, ypoints)
-plt.show()
 #import joblib
 #import neptune
 #from neptune.types import File
